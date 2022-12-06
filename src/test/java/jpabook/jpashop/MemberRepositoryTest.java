@@ -1,8 +1,6 @@
 package jpabook.jpashop;
 
-import jpabook.jpashop.MemberRepository.MemberRepository;
-import jpabook.jpashop.domain.Member;
-import org.assertj.core.api.Assertions;
+import jpabook.jpashop.Repository.MemberRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
