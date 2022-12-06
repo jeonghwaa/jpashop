@@ -18,6 +18,7 @@ public class ItemRepository {
             em.persist(item);   //신규등록와 비슷
         } else {
             em.merge(item);     //update와 비슷
+            em.merge(item);
         }
     }
 

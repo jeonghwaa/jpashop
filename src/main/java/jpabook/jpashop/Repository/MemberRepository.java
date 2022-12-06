@@ -1,4 +1,4 @@
-package jpabook.jpashop.MemberRepository;
+package jpabook.jpashop.Repository;
 
 import jpabook.jpashop.domain.Member;
 import lombok.RequiredArgsConstructor;
