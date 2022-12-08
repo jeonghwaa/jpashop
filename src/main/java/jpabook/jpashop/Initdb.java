@@ -53,9 +53,7 @@ public class Initdb {
             Delivery delivery = createDelivery(member);
             Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
             em.persist(order);
-
         }
-
 
         public void dbInit2() {
             Member member = createMember("userB", "진주", "2", "2222");
