@@ -1,6 +1,6 @@
 package jpabook.jpashop.service;
 
-import jpabook.jpashop.repository.MemberRepository;
+import jpabook.jpashop.repository.MemberRepositoryOld;
 import jpabook.jpashop.domain.Member;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +19,8 @@ import static junit.framework.TestCase.fail;
 public class MemberServiceTest {
 
     @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
+    @Autowired
+    MemberRepositoryOld memberRepositoryOld;
     @Test
     public void 회원가입() throws Exception {
         //Given
@@ -28,7 +29,7 @@ public class MemberServiceTest {
         //When
         Long saveId = memberService.join(member);
         //Then
-        assertEquals(member, memberRepository.findOne(saveId));
+        assertEquals(member, memberRepositoryOld.findOne(saveId));
     }
     @Test(expected = IllegalStateException.class)
     public void 중복_회원_예외() throws Exception {
